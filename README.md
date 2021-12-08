@@ -18,7 +18,8 @@ For AMD: `amd_iommu=on iommu=pt video=efifb:off`
 
 We need `video=efifb:off` as the EFI Framebuffer on the GPU will latch onto the GPU BARs. In simpler terms, it will allow you to shut down your Virtual Machine.
 
-You also need to edit `/etc/mkinitcpio.conf` and add `amdgpu` inside of `MODULES=()` just in case your keyboard doesn’t work on your PC when booting in. It should look like `MODULES=(amdgpu)` and then finally, run `sudo mkinitpcio`
+
+You also need to edit `/etc/mkinitcpio.conf` and add `amdgpu` inside of `MODULES=()` just in case your keyboard doesn’t work on your PC when booting in. It should look like `MODULES=(amdgpu)` and then finally, run `sudo mkinitpcio`. This is usually only needed if you encrypt your Linux drive
 
 The link [Here](https://wiki.archlinux.org/title/Kernel_parameters) should tell you where to put it depending on your bootloader
 
@@ -60,7 +61,7 @@ If the output states `Ftrace is not available in your kernel.` It is because you
 
 ## What do I do if ftrace doesn’t work for my kernel?
 
-There is not much, to be honest. You could either try to 
+There is not much, to be honest. You could either try to apply the ACS patch to your kernel but that would require compiling it which may take a while. Or you can switch to another a kernel which does support ftrace. However, most kernels should already have this.
 
 # Installing Vendor-Reset:
 

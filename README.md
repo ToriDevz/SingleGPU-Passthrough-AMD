@@ -214,7 +214,7 @@ mkdir -p /etc/libvirt/hooks/qemu.d/VM-NAME/prepare/begin
 Will become:
 
 ```bash
-mkdir -p /etc/libvirt/hooks/qemu.d/VM-NAME/prepare/begin
+mkdir -p /etc/libvirt/hooks/qemu.d/macOS/prepare/begin
 ```
 
 (Do that command above btw)
